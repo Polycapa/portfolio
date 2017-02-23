@@ -116,7 +116,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
-    <app-location route="{{route}}"></app-location>
+    <app-location use-hash-as-path route="{{route}}"></app-location>
     <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
     <app-drawer-layout fullbleed>
@@ -137,10 +137,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a href="#"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
         </div>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="home" href="/home">Accueil</a>
-          <a name="skills" href="/skills">Compétences</a>
-          <a name="education" href="/education">Parcours</a>
-          <a name="projects" href="/projects">Projet</a>
+          <a name="home" href="#/home">Accueil</a>
+          <a name="skills" href="#/skills">Compétences</a>
+          <a name="education" href="#/education">Parcours</a>
+          <a name="projects" href="#/projects">Projet</a>
         </iron-selector>
       </app-drawer>
 
@@ -155,8 +155,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
           <home-page name="home"></home-page>
-          <my-view2 name="view2"></my-view2>
-          <my-view3 name="view3"></my-view3>
+          <skills-page name="skills"></skills-page>
+          <education-page name="education"></education-page>
+          <projects-page name="projects"></projects-page>
           <my-view404 name="view404"></my-view404>
         </iron-pages>
       </app-header-layout>
