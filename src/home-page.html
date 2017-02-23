@@ -1,0 +1,101 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="shared-styles.html">
+
+
+<dom-module id="home-page">
+    <template>
+        <style include="shared-styles iron-flex iron-flex-alignment">
+             :host {
+                display: block;
+                background: var(--paper-grey-300);
+                height: 100vh;
+            }
+            
+            .title {
+                font-weight: lighter;
+                font-size: 4em;
+                height: 20vh;
+            }
+            
+            blockquote {
+                font-weight: lighter;
+                color: #737373;
+                font-size: 24px;
+                quotes: "\00ab" "\00bb";
+                text-align: center;
+            }
+            
+            blockquote::before {
+                content: open-quote;
+            }
+            
+            blockquote::after {
+                content: close-quote;
+            }
+            
+            .blue {
+                background: var(--paper-blue-500);
+                color: white;
+            }
+            
+            .amber {
+                background: var(--paper-amber-500);
+                color: white;
+            }
+            
+            .red {
+                background: var(--paper-red-500);
+                color: white;
+            }
+            
+            .card {
+                font-size: 22px;
+                height: 150px;
+                width: 230px;
+                text-transform: uppercase;
+                text-align: center;
+                @apply(--shadow-transition);
+            }
+            
+            .card:hover {
+                @apply(--shadow-elevation-8dp);
+            }
+            
+            .body {
+                min-height: 100vh;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+        </style>
+        <div class="vertical layout body">
+            <div class="title horizontal center-justified center layout">
+                Mathieu Witcz
+            </div>
+            <div class="horizontal center center-justified layout">
+                <blockquote class="quote">
+                    Etudiant à l'ENSIMAG, je suis passionné par les nouvelles technologies. Appréciant particulièrement le web et les produits
+                    Apple, je me destine pour le moment au développement d'applications web
+                </blockquote>
+            </div>
+            <div class="horizontal around-justified layout wrap">
+                <a href="#/skills">
+                    <div class="card blue horizontal center center-justified layout">Mes compétences</div>
+                </a>
+                <a href="#/education">
+                    <div class="card red horizontal center center-justified layout">Mon parcours</div>
+                </a>
+                <a href="#/projects">
+                    <div class="card amber horizontal center center-justified layout">Mes projets</div>
+                </a>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'home-page'
+        });
+    </script>
+</dom-module>
