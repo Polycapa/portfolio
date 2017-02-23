@@ -1,0 +1,135 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-toast/paper-toast.html">
+<dom-module id="data-requester">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
+    </style>
+    <paper-toast id="alert"></paper-toast>
+    <iron-ajax with-credentials="[[withCredentials]]" id="ajax" handle-as="json" on-response="handleResponse" on-error="handleError"></iron-ajax>
+  </template>
+  <script>
+    Polymer({
+      is: 'data-requester',
+      properties: {
+        withCredentials: {
+          type: Boolean,
+          value: false
+        },
+        requestQueue: {
+          type: Boolean,
+          value: function () {
+            return [];
+          }
+        },
+        onSameDomain: {
+          type: Boolean,
+          value: true
+        }
+      },
+      request: function (url) {
+
+        var request = this.requestQueue[0];
+        if (!request) {
+          return;
+        }
+
+        params = request.params || {};
+        method = request.method || 'get';
+        if (this.onSameDomain) {
+          this.$.ajax.url = window.location.origin + request.url;
+        } else {
+          this.$.ajax.url = request.url;
+        }
+        this.$.ajax.params = params;
+        this.$.ajax.method = method;
+
+        this.$.ajax.generateRequest();
+      },
+      handleResponse: function (event, request) {
+        var rep = event.detail.response;
+
+        var request = this.requestQueue.shift();
+        if (rep && rep.error) {
+          // Handle server error custom text
+          console.error('Error on "' + request.event + '": ', rep.error);
+          this.$.alert.text = rep.error;
+          this.$.alert.show();
+          this.fire('error', {
+            error: rep.error
+          });
+          return;
+        }
+
+        this.fire(request.event, {
+          response: rep
+        });
+
+        if (this.requestQueue.length > 0) {
+          this.request();
+        }
+      },
+      handleError: function (event) {
+        console.log('Error : ', event);
+        // this.$.alert.text = event.detail.error;
+        // this.$.alert.show();
+        this.fire('error', {
+          error: event.detail.error
+        });
+        var request = this.requestQueue.shift();
+
+        this.fire(request.event + '-error', {
+          error: event.detail.error
+        });
+
+        if (this.requestQueue.length > 0) {
+          this.request();
+        }
+      },
+      get: function (url, event) {
+        this.requestQueue.push({
+          url: url,
+          method: 'get',
+          event: event || 'get'
+        });
+        if (this.requestQueue.length == 1) {
+          this.request();
+        }
+      },
+      post: function (url, params, event) {
+        this.requestQueue.push({
+          url: url,
+          method: 'post',
+          params: params,
+          event: event || 'post'
+        })
+        if (this.requestQueue.length == 1) {
+          this.request();
+        }
+      },
+      put: function (url, event) {
+        this.requestQueue.push({
+          url: url,
+          method: 'put',
+          event: event || 'put'
+        });
+        if (this.requestQueue.length == 1) {
+          this.request();
+        }
+      },
+      delete: function (url, event) {
+        this.requestQueue.push({
+          url: url,
+          method: 'delete',
+          event: event || 'delete'
+        });
+        if (this.requestQueue.length == 1) {
+          this.request();
+        }
+      }
+    });
+  </script>
+</dom-module>
