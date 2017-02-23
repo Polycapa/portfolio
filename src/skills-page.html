@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="data-page.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="data-requester.html">
+
+
+<dom-module id="skills-page">
+    <template>
+        <style include="shared-styles">
+             :host {
+                display: block;
+                min-height: 100vh;
+                background: var(--paper-grey-300);
+            }
+            
+            .header {
+                height: 20vh;
+                color: white;
+                text-transform: uppercase;
+                background: var(--paper-blue-500);
+                font-size: 3em;
+                @apply(--shadow-elevation-4dp);
+            }
+        </style>
+
+        <data-requester id="requester" on-get-data="_handleDataResponse"></data-requester>
+
+        <div class="horizontal center center-justified layout header">Compétences</div>
+        <data-page></data-page>
+    </template>
+    <script>
+        Polymer({
+            is: 'skills-page',
+            ready: function () {
+                this.$.requester.get('/data/skills.json', 'get-data');
+            },
+            _handleDataResponse: function (e) {
+                console.log(e.detail.response);
+            }
+        });
+    </script>
+</dom-module>
