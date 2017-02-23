@@ -1,0 +1,72 @@
+[{
+    "title": "",
+    "data": [{
+            "name": "Développement Web",
+            "picture": "",
+            "content": [{
+                    "text": "Bootstrap, Polymer, Symfony, NodeJS, Electron",
+                    "isChip": true
+                },
+                {
+                    "text": "HTML/CSS ",
+                    "isChip": true
+                },
+                {
+                    "text": "Javascript",
+                    "isChip": true
+                },
+                {
+                    "text": "PHP, Wordpress",
+                    "isChip": true
+                }
+            ]
+        },
+        {
+            "name": "Développement Natif",
+            "picture": "",
+            "content": [{
+                    "text": "C++",
+                    "isChip": true
+                },
+                {
+                    "text": "Java",
+                    "isChip": true
+                },
+                {
+                    "text": "C",
+                    "isChip": true
+                }
+            ]
+        },
+        {
+            "name": "Base de Données",
+            "picture": "",
+            "content": [{
+                    "text": "SQL",
+                    "isChip": true
+                },
+                {
+                    "text": "MySQL / Oracle",
+                    "isChip": true
+                },
+                {
+                    "text": "PhpMyAdmin",
+                    "isChip": true
+                }
+            ]
+        },
+        {
+            "name": "Langues",
+            "picture": "",
+            "content": [{
+                    "text": "Français : natif",
+                    "isChip": true
+                },
+                {
+                    "text": "Anglais : <b>TOEIC :</b> 905/990",
+                    "isChip": true
+                }
+            ]
+        }
+    ]
+}]
