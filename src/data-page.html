@@ -1,0 +1,27 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+
+<dom-module id="data-page">
+    <template>
+        <style include="shared-styles">
+             :host {
+                display: block;
+            }
+        </style>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'data-page',
+            properties: {
+                data: {
+                    type: Object,
+                    value: function () {
+                        return [];
+                    }
+                }
+            }
+        });
+    </script>
+</dom-module>
