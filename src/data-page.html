@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/s-html/s-html.html">
 <link rel="import" href="shared-styles.html">
 
 
@@ -7,8 +8,72 @@
         <style include="shared-styles">
              :host {
                 display: block;
+                color: black;
+                --puce-picture-size: 40px;
+            }
+            
+            .card {
+                color: black;
+                height: 100%;
+                /*min-height: 150px;*/
+                min-width: 230px;
+                max-width: 400px;
+                @apply(--shadow-transition);
+            }
+            
+            .card:hover {
+                @apply(--shadow-elevation-8dp);
+            }
+            
+            .title {
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: bold;
+                font-size: 22px;
+                border-bottom: 1px solid #eaeaea;
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+            }
+            
+            .puce-picture {
+                border-radius: 50%;
+                width: var(--puce-picture-size);
+                height: var(--puce-picture-size);
+                margin-right: 10px;
+            }
+            
+            .puce {
+                /*margin: 5px 0 5px 0;*/
+                margin: 10px;
             }
         </style>
+
+        <div class="horizontal around-justified wrap layout">
+            <template is="dom-repeat" items= {{data}} as=item index-as=index>
+                <div class="card">
+                    <div class="title">
+                        [[item.name]]
+                    </div>
+
+                    <div class="horizontal around-justified wrap layout">
+                        <template is="dom-repeat" items= {{item.content}} as=content index-as=index>
+                            <template is="dom-if" if= {{content.picture}}>
+                                <div class="horizontal center layout puce">
+                                    <img src="{{content.picture}}" alt="{{content.text}}" class="puce-picture">
+                                    <s-html html="{{content.text}}"></s-html>
+                                </div>
+                            </template>
+                            <template is="dom-if" if= {{!content.picture}}>
+                                <div class="puce">
+                                    <s-html html="{{content.text}}"></s-html>
+                                </div>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+
+            </template>
+        </div>
 
     </template>
     <script>
