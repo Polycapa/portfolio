@@ -1,19 +1,148 @@
 [{
-    "title": "Personnels",
-    "data": [{
-        "name": "Portfolio en ligne",
-        "picture": "./images/projects/portfolio.png",
-        "content": [{
-            "text": "Ce site web regroupe mon CV et mes différents projets ",
-            "picture": ""
-        }],
-        "languages": [{
-            "name": "Polymer",
-            "picture": "./images/logos/polymer_logo.png"
-        }],
-        "urls": [{
-            "name": "mathieu-witcz.fr",
-            "value": "http://mathieu-witcz.fr"
-        }]
-    }]
-}]
+        "title": "Personnels",
+        "data": [{
+                "name": "JSON Generator",
+                "picture": "./images/projects/json_generator.png",
+                "content": [{
+                    "text": "Outil graphique permettant de créer rapidement et facilement des fichiers JSON.",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Polymer",
+                    "picture": "./images/logos/polymer_logo.png"
+                }],
+                "urls": [{
+                        "name": "Voir en ligne",
+                        "value": "http://polycapa.fr/json-generator/"
+                    },
+                    {
+                        "name": "GitHub",
+                        "value": "https://github.com/Polycapa/json-generator"
+                    }
+                ]
+            },
+            {
+                "name": "Graph App",
+                "picture": "./images/projects/graph_app.png",
+                "content": [{
+                    "text": "Outil en ligne permettant de générer à plusieurs en ligne un graphe",
+                    "picture": ""
+                }],
+                "languages": [{
+                        "name": "Polymer",
+                        "picture": "./images/logos/polymer_logo.png"
+                    },
+                    {
+                        "name": "NodeJS",
+                        "picture": "./images/logos/nodejs_logo.png"
+                    },
+                    {
+                        "name": "Cytoscape JS",
+                        "picture": "./images/logos/cytoscape_js_logo.png"
+                    }
+                ],
+                "urls": [{
+                    "name": "GitHub",
+                    "value": "https://github.com/Polycapa/graph-app"
+                }]
+            },
+            {
+                "name": "Vote Ensimag",
+                "picture": "./images/projects/vote_ensimag.png",
+                "content": [{
+                    "text": "Site de vote en ligne pour la campagne BDE/BDS de l'Ensimag",
+                    "picture": ""
+                }],
+                "languages": [{
+                        "name": "Polymer",
+                        "picture": "./images/logos/polymer_logo.png"
+                    },
+                    {
+                        "name": "SailsJS",
+                        "picture": "./images/logos/sails_logo.png"
+                    }
+                ],
+                "urls": [{
+                    "name": "GitHub",
+                    "value": "https://github.com/Polycapa/vote-ensimag"
+                }]
+            }, {
+                "name": "Portfolio en ligne",
+                "picture": "./images/projects/portfolio.png",
+                "content": [{
+                    "text": "Ce site web regroupe mon CV et mes différents projets ",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Polymer",
+                    "picture": "./images/logos/polymer_logo.png"
+                }]
+            },
+            {
+                "name": "Gestionnaire de notes",
+                "picture": "./images/projects/gestion_notes.png",
+                "content": [{
+                    "text": "Application de gestion de notes avec calcul de moyennes",
+                    "picture": ""
+                }],
+                "languages": [{
+                        "name": "Bootstrap",
+                        "picture": "./images/logos/bootstrap_logo.png"
+                    },
+                    {
+                        "name": "jQuery",
+                        "picture": "./images/logos/jquery_logo.png"
+                    }
+                ],
+                "urls": [{
+                    "name": "Voir en ligne",
+                    "value": "http://mathieu-witcz.fr/notes/"
+                }]
+            },
+            {
+                "name": "Quoridor",
+                "picture": "./images/projects/quoridor.png",
+                "content": [{
+                    "text": "Création d'une IA (Intelligence Artificielle) pour le jeu Quoridor<br><br><b>Cadre du projet : </b><br>Projet réalisé pour le concours \"Les 24H des IUT Informatiques\" ",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Java",
+                    "picture": "./images/logos/java_logo.png"
+                }],
+                "urls": [{
+                    "name": "Voir en ligne",
+                    "value": "http://mathieu-witcz.fr/notes/"
+                }]
+            }
+        ]
+    },
+    {
+        "title": "Scolaires",
+        "data": [{
+                "name": "Decac",
+                "picture": "./images/projects/deca.png",
+                "content": [{
+                    "text": "Compilateur pour le langage Deca, sous-langage de Java <br><br><b>Cadre du projet : </b><br>Projet de Génie Logiciel à l'Ensimag",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Java",
+                    "picture": "./images/logos/java_logo.png"
+                }]
+            },
+            {
+                "name": "Mastermind",
+                "picture": "./images/projects/mastermind.png",
+                "content": [{
+                    "text": "Copie du jeu Mastermind, le but du jeu est de trouver en dix coups maximum la combinaison de 8 couleurs et formes choisies par l'ordinateur <br><br><b>Cadre du projet : </b><br>Projet réalisé pour la spécialité ISN de BAC S",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "C / SDL",
+                    "picture": "./images/logos/c_logo.png"
+                }]
+            }
+        ]
+    }
+]
