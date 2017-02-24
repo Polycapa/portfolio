@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="shared-styles.html">
 
 
@@ -72,7 +73,17 @@
             a {
                 text-decoration: none;
             }
+            
+            .links a {
+                color: black;
+            }
+            
         </style>
+
+
+        <iron-media-query query="max-width:641px" query-matches="{{mobile}}">
+        </iron-media-query>
+
         <div class="vertical layout body">
             <div class="title horizontal center-justified center layout">
                 Mathieu Witcz
@@ -82,6 +93,12 @@
                     Etudiant à l'ENSIMAG, je suis passionné par les nouvelles technologies. Appréciant particulièrement le web et les produits
                     Apple, je me destine pour le moment au développement d'applications web
                 </blockquote>
+            </div>
+            <div class="links horizontal center around-justified layout" hidden$="{{!mobile}}">
+                <a href="mailto:mathieu.witcz@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/mathieuwitcz/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                <a href="https://github.com/Polycapa" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
             </div>
             <div class="horizontal around-justified layout wrap">
                 <a href="#/skills">
