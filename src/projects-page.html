@@ -87,7 +87,10 @@
                 Polymer.AppLocalizeBehavior
             ],
             ready: function () {
-                this.$.requester.get('/data/projects.json', 'get-data');
+                var url = '/data/projects.json';
+                if (this.language == 'en')
+                    url = '/data/projects_en.json'
+                this.$.requester.get(url, 'get-data');
             },
             _handleDataResponse: function (e) {
                 this.data = e.detail.response
