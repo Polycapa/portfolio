@@ -1,0 +1,19 @@
+[{
+    "title": "Personnels",
+    "data": [{
+        "name": "Portfolio en ligne",
+        "picture": "./images/projects/portfolio.png",
+        "content": [{
+            "text": "Ce site web regroupe mon CV et mes différents projets ",
+            "picture": ""
+        }],
+        "languages": [{
+            "name": "Polymer",
+            "picture": "./images/logos/polymer_logo.png"
+        }],
+        "urls": [{
+            "name": "mathieu-witcz.fr",
+            "value": "http://mathieu-witcz.fr"
+        }]
+    }]
+}]
