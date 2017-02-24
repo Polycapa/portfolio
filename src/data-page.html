@@ -122,13 +122,13 @@
 
                         <template is="dom-if" if= {{item.languages}}>
                             <div class="subtitle">
-                                Langages
+                                Langages & Frameworks
                             </div>
                             <div class="horizontal around-justified wrap layout">
                                 <template is="dom-repeat" items= {{item.languages}} as=content index-as=index>
                                     <template is="dom-if" if= {{content.picture}}>
                                         <div class="horizontal center layout puce">
-                                            <img src="{{content.picture}}" alt="{{content.text}}" class="puce-picture">
+                                            <img src="{{content.picture}}" alt="{{content.name}}" class="puce-picture">
                                             <s-html html="{{content.name}}"></s-html>
                                         </div>
                                     </template>
@@ -147,9 +147,7 @@
                             <div class="horizontal around-justified wrap layout urls">
                                 <template is="dom-repeat" items= {{item.urls}} as=url index-as=index>
                                     <a href$="{{url.value}}" target="_blank">
-
                                         <paper-button>[[url.name]]</paper-button>
-
                                     </a>
                                 </template>
                             </div>
