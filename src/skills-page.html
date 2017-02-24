@@ -11,31 +11,62 @@
                 display: block;
                 min-height: 100vh;
                 background: var(--paper-grey-300);
+                --header-height: 20vh;
             }
             
             .header {
-                height: 20vh;
+                height: var(--header-height);
                 color: white;
                 text-transform: uppercase;
                 background: var(--paper-blue-500);
                 font-size: 3em;
                 @apply(--shadow-elevation-4dp);
             }
+            
+            .title {
+                font-weight: lighter;
+                font-size: 1.8em;
+                padding: 5px;
+                color: white;
+            }
+            
+            .content {
+                background: var(--paper-blue-300);
+                min-height: calc(100vh - var(--header-height));
+            }
         </style>
 
         <data-requester id="requester" on-get-data="_handleDataResponse"></data-requester>
 
         <div class="horizontal center center-justified layout header">Compétences</div>
-        <data-page></data-page>
+        <div class="content">
+
+            <template is="dom-repeat" items= {{data}} as=item index-as=index>
+                <div class="title">
+                    {{item.title}}
+                </div>
+                <data-page data="[[item.data]]"></data-page>
+            </template>
+
+        </div>
     </template>
     <script>
         Polymer({
             is: 'skills-page',
+            properties: {
+                data: {
+                    type: Object,
+                    value: function () {
+                        return []
+                    }
+                }
+            },
             ready: function () {
                 this.$.requester.get('/data/skills.json', 'get-data');
             },
             _handleDataResponse: function (e) {
                 console.log(e.detail.response);
+                this.data = e.detail.response
             }
         });
     </script>
