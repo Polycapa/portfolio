@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
 <link rel="import" href="shared-styles.html">
 
 
@@ -79,26 +80,55 @@
             </div>
             <div class="horizontal center center-justified layout">
                 <blockquote class="quote">
-                    Etudiant à l'ENSIMAG, je suis passionné par les nouvelles technologies. Appréciant particulièrement le web et les produits
-                    Apple, je me destine pour le moment au développement d'applications web
+                    {{localize('quote')}}
                 </blockquote>
             </div>
             <div class="horizontal around-justified layout wrap">
                 <a href="#/skills">
-                    <div class="card blue horizontal center center-justified layout">Mes compétences</div>
+                    <div class="card blue horizontal center center-justified layout">{{localize('skills')}}</div>
                 </a>
                 <a href="#/education">
-                    <div class="card red horizontal center center-justified layout">Mon parcours</div>
+                    <div class="card red horizontal center center-justified layout">{{localize('education')}}</div>
                 </a>
                 <a href="#/projects">
-                    <div class="card amber horizontal center center-justified layout">Mes projets</div>
+                    <div class="card amber horizontal center center-justified layout">{{localize('projects')}}</div>
                 </a>
             </div>
         </div>
     </template>
     <script>
         Polymer({
-            is: 'home-page'
+            is: 'home-page',
+            properties: {
+                language: {
+                    value: function () {
+                        var language = navigator.language || navigator.browserLanguage;
+                        return language.substring(0, 2);
+                    }
+                },
+                resources: {
+                    value: function () {
+                        return {
+                            'en': {
+                                'quote': 'Student at Ensimag, one of the most prestigious French "Grande École" in IT and applied mathematics, and looking for an internship between May and August, I love to develop applications based on web technologies. Fascinated by new technologies, I particularly appreciate iOS that I use every day.',
+                                'skills': 'My skills',
+                                'education': 'My education',
+                                'projects': 'My projects'
+                            },
+                            'fr': {
+                                'quote': 'Etudiant à l\'ENSIMAG, je suis passionné par les nouvelles technologies. Appréciant particulièrement le web et les produits Apple, je me destine pour le moment au développement d\'applications web',
+                                'skills': 'Mes compétences',
+                                'education': 'Mon parcours',
+                                'projects': 'Mes projets'
+                            }
+                        }
+                    }
+                }
+            },
+
+            behaviors: [
+                Polymer.AppLocalizeBehavior
+            ],
         });
     </script>
 </dom-module>

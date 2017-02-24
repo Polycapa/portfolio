@@ -15,6 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
 <link rel="import" href="../bower_components/app-route/app-location.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
@@ -166,10 +167,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
         </div>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="home" href="#/home">Accueil</a>
-          <a name="skills" href="#/skills">Compétences</a>
-          <a name="education" href="#/education">Parcours</a>
-          <a name="projects" href="#/projects">Projet</a>
+          <a name="home" href="#/home">{{localize('home')}}</a>
+          <a name="skills" href="#/skills">{{localize('skills')}}</a>
+          <a name="education" href="#/education">{{localize('education')}}</a>
+          <a name="projects" href="#/projects">{{localize('projects')}}</a>
         </iron-selector>
       </app-drawer>
 
@@ -203,7 +204,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           reflectToAttribute: true,
           observer: '_pageChanged',
         },
+        language: {
+          value: function () {
+            var language = navigator.language || navigator.browserLanguage;
+            return language.substring(0, 2);
+          }
+        },
+        resources: {
+          value: function () {
+            return {
+              'en': {
+                'home': 'Home',
+                'skills': 'Skills',
+                'education': 'Education',
+                'projects': 'Projects'
+              },
+              'fr': {
+                'home': 'Accueil',
+                'skills': 'Compétences',
+                'education': 'Parcours',
+                'projects': 'Projets'
+              }
+            }
+          }
+        }
       },
+
+      behaviors: [
+        Polymer.AppLocalizeBehavior
+      ],
 
       observers: [
         '_routePageChanged(routeData.page)',
