@@ -28,6 +28,7 @@
                 font-size: 1.8em;
                 padding: 5px;
                 color: white;
+                padding-left: 15px;
             }
             
             .content {
@@ -40,20 +41,32 @@
 
         <div class="horizontal center center-justified layout header">Parcours</div>
         <div class="content">
-            <div class="title">Test</div>
-            <data-page id="data"></data-page>
-            <div class="title">Test</div>
-            <data-page id="data"></data-page>
+
+            <template is="dom-repeat" items= {{data}} as=item index-as=index>
+                <div class="title">
+                    {{item.title}}
+                </div>
+                <data-page data="[[item.data]]"></data-page>
+            </template>
+
         </div>
     </template>
     <script>
         Polymer({
             is: 'education-page',
+            properties: {
+                data: {
+                    type: Object,
+                    value: function () {
+                        return []
+                    }
+                }
+            },
             ready: function () {
-                this.$.requester.get('/data/skills.json', 'get-data');
+                this.$.requester.get('/data/education.json', 'get-data');
             },
             _handleDataResponse: function (e) {
-                this.$.data.data = e.detail.response;
+                this.data = e.detail.response
             }
         });
     </script>
