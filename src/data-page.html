@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/s-html/s-html.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="shared-styles.html">
 
 
@@ -18,11 +19,17 @@
                 /*min-height: 150px;*/
                 min-width: 230px;
                 max-width: 400px;
+                padding: 0;
                 @apply(--shadow-transition);
             }
             
             .card:hover {
                 @apply(--shadow-elevation-8dp);
+            }
+            
+            .body {
+                padding: 10px;
+                text-align: justify;
             }
             
             .title {
@@ -32,6 +39,19 @@
                 font-size: 22px;
                 border-bottom: 1px solid #eaeaea;
                 padding-bottom: 5px;
+                margin-bottom: 5px;
+            }
+            
+            .subtitle {
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: bold;
+                font-size: 17px;
+                border-top: 1px solid #eaeaea;
+                border-bottom: 1px solid #eaeaea;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-top: 5px;
                 margin-bottom: 5px;
             }
             
@@ -46,29 +66,95 @@
                 /*margin: 5px 0 5px 0;*/
                 margin: 10px;
             }
+            
+            .header-picture {
+                height: 170px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            
+            paper-button {
+                color: white;
+                background-color: var(--paper-blue-500);
+            }
+            
+            .urls {
+                border-top: 1px solid #eaeaea;
+                padding-top: 5px;
+                margin-top: 5px;
+            }
+            
+            a {
+                text-decoration: none;
+            }
         </style>
 
         <div class="horizontal around-justified wrap layout">
             <template is="dom-repeat" items= {{data}} as=item index-as=index>
                 <div class="card">
-                    <div class="title">
-                        [[item.name]]
-                    </div>
 
-                    <div class="horizontal around-justified wrap layout">
-                        <template is="dom-repeat" items= {{item.content}} as=content index-as=index>
-                            <template is="dom-if" if= {{content.picture}}>
-                                <div class="horizontal center layout puce">
-                                    <img src="{{content.picture}}" alt="{{content.text}}" class="puce-picture">
-                                    <s-html html="{{content.text}}"></s-html>
-                                </div>
+
+                    <template is="dom-if" if= {{item.picture}}>
+                        <div class="header-picture" style$="background:url('{{item.picture}}'); background-size: cover;background-position: center;"></div>
+                    </template>
+
+                    <div class="body">
+                        <div class="title">
+                            [[item.name]]
+                        </div>
+
+                        <div class="horizontal around-justified wrap layout">
+                            <template is="dom-repeat" items= {{item.content}} as=content index-as=index>
+                                <template is="dom-if" if= {{content.picture}}>
+                                    <div class="horizontal center layout puce">
+                                        <img src="{{content.picture}}" alt="{{content.text}}" class="puce-picture">
+                                        <s-html html="{{content.text}}"></s-html>
+                                    </div>
+                                </template>
+                                <template is="dom-if" if= {{!content.picture}}>
+                                    <div class="puce">
+                                        <s-html html="{{content.text}}"></s-html>
+                                    </div>
+                                </template>
                             </template>
-                            <template is="dom-if" if= {{!content.picture}}>
-                                <div class="puce">
-                                    <s-html html="{{content.text}}"></s-html>
-                                </div>
-                            </template>
+                        </div>
+
+
+                        <template is="dom-if" if= {{item.languages}}>
+                            <div class="subtitle">
+                                Langages
+                            </div>
+                            <div class="horizontal around-justified wrap layout">
+                                <template is="dom-repeat" items= {{item.languages}} as=content index-as=index>
+                                    <template is="dom-if" if= {{content.picture}}>
+                                        <div class="horizontal center layout puce">
+                                            <img src="{{content.picture}}" alt="{{content.text}}" class="puce-picture">
+                                            <s-html html="{{content.name}}"></s-html>
+                                        </div>
+                                    </template>
+                                    <template is="dom-if" if= {{!content.picture}}>
+                                        <div class="puce">
+                                            <s-html html="{{content.name}}"></s-html>
+                                        </div>
+                                    </template>
+                                </template>
+                            </div>
                         </template>
+
+
+
+                        <template is="dom-if" if= {{item.urls}}>
+                            <div class="horizontal around-justified wrap layout urls">
+                                <template is="dom-repeat" items= {{item.urls}} as=url index-as=index>
+                                    <a href$="{{url.value}}" target="_blank">
+
+                                        <paper-button>[[url.name]]</paper-button>
+
+                                    </a>
+                                </template>
+                            </div>
+                        </template>
+
                     </div>
                 </div>
 
