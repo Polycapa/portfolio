@@ -1,0 +1,107 @@
+[{
+    "title": "",
+    "data": [{
+            "name": "Web Development",
+            "picture": "",
+            "content": [{
+                    "text": "Bootstrap",
+                    "picture": "./images/logos/bootstrap_logo.png"
+
+                }, {
+                    "text": "Polymer",
+
+                    "picture": "./images/logos/polymer_logo.png"
+                }, {
+                    "text": "Symfony",
+                    "picture": "./images/logos/symfony_logo.jpg"
+
+                }, {
+                    "text": "NodeJS",
+                    "picture": "./images/logos/nodejs_logo.png"
+
+                }, {
+                    "text": "Electron",
+                    "picture": "./images/logos/electron_logo.png"
+
+                }, {
+                    "text": "Javascript",
+                    "picture": "./images/logos/js_logo.png"
+
+                },
+                {
+                    "text": "HTML5",
+                    "picture": "./images/logos/html_logo.png"
+
+                }, {
+                    "text": "CSS3",
+                    "picture": "./images/logos/css_logo.png"
+
+                }, {
+                    "text": "PHP",
+                    "picture": "./images/logos/php_logo.png"
+
+                }, {
+                    "text": "Wordpress",
+                    "picture": "./images/logos/wp_logo.png"
+
+                }
+            ]
+        },
+        {
+            "name": "Native Development",
+            "picture": "",
+            "content": [{
+                    "text": "C++",
+
+                    "picture": "./images/logos/cpp_logo.jpg"
+                },
+                {
+                    "text": "Java",
+
+                    "picture": "./images/logos/java_logo.png"
+                },
+                {
+                    "text": "C",
+
+                    "picture": "./images/logos/c_logo.png"
+                }
+            ]
+        },
+        {
+            "name": "Database",
+            "picture": "",
+            "content": [{
+                    "text": "SQL",
+
+                    "picture": "./images/logos/sql_logo.png"
+                },
+                {
+                    "text": "MySQL",
+
+                    "picture": "./images/logos/mysql_logo.png"
+                },
+                {
+                    "text": "Oracle",
+
+                    "picture": "./images/logos/oracle_sql_logo.png"
+                },
+                {
+                    "text": "PhpMyAdmin",
+
+                    "picture": "./images/logos/phpmyadmin_logo.png"
+                }
+            ]
+        },
+        {
+            "name": "Languages",
+            "picture": "",
+            "content": [{
+                    "text": "Français : native language"
+                },
+                {
+                    "text": "Anglais : <b>TOEIC :</b> 905/990"
+                }
+            ]
+        }
+    ]
+}]

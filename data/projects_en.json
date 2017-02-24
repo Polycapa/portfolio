@@ -1,0 +1,144 @@
+[{
+        "title": "Personals",
+        "data": [{
+                "name": "JSON Generator",
+                "picture": "./images/projects/json_generator.png",
+                "content": [{
+                    "text": "Graphical tool for easily create JSON files",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Polymer",
+                    "picture": "./images/logos/polymer_logo.png"
+                }],
+                "urls": [{
+                        "name": "See online",
+                        "value": "http://polycapa.fr/json-generator/"
+                    },
+                    {
+                        "name": "GitHub",
+                        "value": "https://github.com/Polycapa/json-generator"
+                    }
+                ]
+            },
+            {
+                "name": "Graph App",
+                "picture": "./images/projects/graph_app.png",
+                "content": [{
+                    "text": "Online tool for create a graph with other people",
+                    "picture": ""
+                }],
+                "languages": [{
+                        "name": "Polymer",
+                        "picture": "./images/logos/polymer_logo.png"
+                    },
+                    {
+                        "name": "NodeJS",
+                        "picture": "./images/logos/nodejs_logo.png"
+                    },
+                    {
+                        "name": "Cytoscape JS",
+                        "picture": "./images/logos/cytoscape_js_logo.png"
+                    }
+                ],
+                "urls": [{
+                    "name": "GitHub",
+                    "value": "https://github.com/Polycapa/graph-app"
+                }]
+            },
+            {
+                "name": "Vote Ensimag",
+                "picture": "./images/projects/vote_ensimag.png",
+                "content": [{
+                    "text": "Online voting site for BDE/BDS campaign of Ensimag",
+                    "picture": ""
+                }],
+                "languages": [{
+                        "name": "Polymer",
+                        "picture": "./images/logos/polymer_logo.png"
+                    },
+                    {
+                        "name": "SailsJS",
+                        "picture": "./images/logos/sails_logo.png"
+                    }
+                ],
+                "urls": [{
+                    "name": "GitHub",
+                    "value": "https://github.com/Polycapa/vote-ensimag"
+                }]
+            }, {
+                "name": "Portfolio en ligne",
+                "picture": "./images/projects/portfolio.png",
+                "content": [{
+                    "text": "Website with my resume and my projects",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Polymer",
+                    "picture": "./images/logos/polymer_logo.png"
+                }]
+            },
+            {
+                "name": "Gestionnaire de notes",
+                "picture": "./images/projects/gestion_notes.png",
+                "content": [{
+                    "text": "Marks management application",
+                    "picture": ""
+                }],
+                "languages": [{
+                        "name": "Bootstrap",
+                        "picture": "./images/logos/bootstrap_logo.png"
+                    },
+                    {
+                        "name": "jQuery",
+                        "picture": "./images/logos/jquery_logo.png"
+                    }
+                ],
+                "urls": [{
+                    "name": "See online",
+                    "value": "http://mathieu-witcz.fr/notes/"
+                }]
+            },
+            {
+                "name": "Quoridor",
+                "picture": "./images/projects/quoridor.png",
+                "content": [{
+                    "text": "Creation of an AI for a game using Dijkstra algorithm and Java",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Java",
+                    "picture": "./images/logos/java_logo.png"
+                }]
+            }
+        ]
+    },
+    {
+        "title": "Studies",
+        "data": [{
+                "name": "Decac",
+                "picture": "./images/projects/deca.png",
+                "content": [{
+                    "text": "Creation of a compiler for Deca, a sublanguage of Java",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "Java",
+                    "picture": "./images/logos/java_logo.png"
+                }]
+            },
+            {
+                "name": "Mastermind",
+                "picture": "./images/projects/mastermind.png",
+                "content": [{
+                    "text": "Copy of the Mastermind game, the goal of the game is to find the combination of 8 colors and shapes chosen by the computer",
+                    "picture": ""
+                }],
+                "languages": [{
+                    "name": "C / SDL",
+                    "picture": "./images/logos/c_logo.png"
+                }]
+            }
+        ]
+    }
+]
