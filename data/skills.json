@@ -4,20 +4,46 @@
             "name": "Développement Web",
             "picture": "",
             "content": [{
-                    "text": "Bootstrap, Polymer, Symfony, NodeJS, Electron",
-                    "isChip": true
-                },
-                {
-                    "text": "HTML/CSS ",
-                    "isChip": true
-                },
-                {
+                    "text": "Bootstrap",
+                    "picture": "./images/bootstrap_logo.png",
+                    "isPuce": true
+                }, {
+                    "text": "Polymer",
+                    "isPuce": true,
+                    "picture": "./images/polymer_logo.png"
+                }, {
+                    "text": "Symfony",
+                    "picture": "./images/symfony_logo.jpg",
+                    "isPuce": true
+                }, {
+                    "text": "NodeJS",
+                    "picture": "./images/nodejs_logo.png",
+                    "isPuce": true
+                }, {
+                    "text": "Electron",
+                    "picture": "./images/electron_logo.png",
+                    "isPuce": true
+                }, {
                     "text": "Javascript",
-                    "isChip": true
+                    "picture": "./images/js_logo.png",
+                    "isPuce": true
                 },
                 {
-                    "text": "PHP, Wordpress",
-                    "isChip": true
+                    "text": "HTML5",
+                    "picture": "./images/html_logo.png",
+                    "isPuce": true
+                }, {
+                    "text": "CSS3",
+                    "picture": "./images/css_logo.png",
+                    "isPuce": true
+                }, {
+                    "text": "PHP",
+                    "picture": "./images/php_logo.png",
+                    "isPuce": true
+                }, {
+                    "text": "Wordpress",
+                    "picture": "./images/wp_logo.png",
+                    "isPuce": true
                 }
             ]
         },
@@ -26,15 +52,18 @@
             "picture": "",
             "content": [{
                     "text": "C++",
-                    "isChip": true
+                    "isPuce": true,
+                    "picture": "./images/cpp_logo.jpg"
                 },
                 {
                     "text": "Java",
-                    "isChip": true
+                    "isPuce": true,
+                    "picture": "./images/java_logo.png"
                 },
                 {
                     "text": "C",
-                    "isChip": true
+                    "isPuce": true,
+                    "picture": "./images/c_logo.png"
                 }
             ]
         },
@@ -43,15 +72,23 @@
             "picture": "",
             "content": [{
                     "text": "SQL",
-                    "isChip": true
+                    "isPuce": true,
+                    "picture": "./images/sql_logo.png"
                 },
                 {
-                    "text": "MySQL / Oracle",
-                    "isChip": true
+                    "text": "MySQL",
+                    "isPuce": true,
+                    "picture": "./images/mysql_logo.png"
+                },
+                {
+                    "text": "Oracle",
+                    "isPuce": true,
+                    "picture": "./images/oracle_sql_logo.png"
                 },
                 {
                     "text": "PhpMyAdmin",
-                    "isChip": true
+                    "isPuce": true,
+                    "picture": "./images/phpmyadmin_logo.png"
                 }
             ]
         },
@@ -60,11 +97,11 @@
             "picture": "",
             "content": [{
                     "text": "Français : natif",
-                    "isChip": true
+                    "isPuce": false
                 },
                 {
                     "text": "Anglais : <b>TOEIC :</b> 905/990",
-                    "isChip": true
+                    "isPuce": false
                 }
             ]
         }
