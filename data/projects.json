@@ -109,10 +109,6 @@
                 "languages": [{
                     "name": "Java",
                     "picture": "./images/logos/java_logo.png"
-                }],
-                "urls": [{
-                    "name": "Voir en ligne",
-                    "value": "http://mathieu-witcz.fr/notes/"
                 }]
             }
         ]
