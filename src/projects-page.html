@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="data-page.html">
 <link rel="import" href="shared-styles.html">
+<link rel="import" href="data-requester.html">
 
 
 <dom-module id="projects-page">
@@ -9,15 +10,51 @@
              :host {
                 display: block;
                 min-height: 100vh;
-                background: var(--paper-amber-500);
+                background: var(--paper-grey-300);
+                --header-height: 20vh;
+            }
+            
+            .header {
+                height: var(--header-height);
+                color: white;
+                text-transform: uppercase;
+                background: var(--paper-orange-500);
+                font-size: 3em;
+                @apply(--shadow-elevation-4dp);
+            }
+            
+            .title {
+                font-weight: lighter;
+                font-size: 1.8em;
+                padding: 5px;
+                color: white;
+            }
+            
+            .content {
+                background: var(--paper-orange-300);
+                min-height: calc(100vh - var(--header-height));
             }
         </style>
-        Hello
+
+        <data-requester id="requester" on-get-data="_handleDataResponse"></data-requester>
+
+        <div class="horizontal center center-justified layout header">Parcours</div>
+        <div class="content">
+            <div class="title">Test</div>
+            <data-page id="data"></data-page>
+            <div class="title">Test</div>
+            <data-page id="data"></data-page>
+        </div>
     </template>
     <script>
         Polymer({
-            is: 'projects-page'
-
+            is: 'projects-page',
+            ready: function () {
+                this.$.requester.get('/data/skills.json', 'get-data');
+            },
+            _handleDataResponse: function (e) {
+                this.$.data.data = e.detail.response;
+            }
         });
     </script>
 </dom-module>
