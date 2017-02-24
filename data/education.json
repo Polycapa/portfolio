@@ -1,0 +1,80 @@
+[{
+        "title": "Formation",
+        "data": [{
+                "name": "2015 - Actuellement",
+                "picture": "",
+                "content": [{
+                    "text": "Actuellement en seconde année à l'ENSIMAG, école d'ingénieur en informatique et mathématiques appliqués à Grenoble",
+                    "picture": ""
+                }]
+            },
+            {
+                "name": "2013 - 2015",
+                "picture": "",
+                "content": [{
+                    "text": "DUT Informatique à l'IUT de Dijon",
+                    "picture": ""
+                }]
+            },
+            {
+                "name": "2011-2013",
+                "picture": "",
+                "content": [{
+                    "text": "Formation initiale scientifique à orientation informatique <br>Bac S option Informatique Sciences du Numérique - Lycée Jean Marc Boivin - Chevigny-St-Sauveur (21)",
+                    "picture": ""
+                }]
+            }
+        ]
+    },
+    {
+        "title": "Expériences",
+        "data": [{
+                "name": "PROJETS EN EQUIPE",
+                "picture": "",
+                "content": [{
+                        "text": "Création d'un compilateur pour le langage Deca (sous-langage de Java)",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Création d'un jeu de Mastermind en langage C pour le BAC (18/20)",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Création d'un extranet en deuxième année de DUT Informatique (16/20)",
+                        "picture": ""
+                    }
+                ]
+            },
+            {
+                "name": "CONCOURS",
+                "picture": "",
+                "content": [{
+                        "text": "Participation au concours inter-IUT \"Les 24H des IUT informatiques\" <br><ul><li>Epreuve de programmation : 8<sup>ème</sup> sur 36</li><li>Epreuve de web : 7<sup>ème</sup> sur 36",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Participation au concours \"La Nuit de l'informatique\" : 2<sup>ème</sup> sur 8",
+                        "picture": ""
+                    }
+                ]
+            },
+            {
+                "name": "PROFESSIONNELLES",
+                "picture": "",
+                "content": [{
+                        "text": " Création d'une application interne à portée nationale pour un leader français de l'énergie",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Emploi saisonnier en Juillet 2014 et 2015 au silo de Pacy-Sur-Armançon (89) appartenant au groupe Soufflet Agriculture",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Stage d'Avril 2015 à Juin 2015 chez Akyos Communication à Dijon (21) ",
+                        "picture": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

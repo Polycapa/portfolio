@@ -5,45 +5,45 @@
             "picture": "",
             "content": [{
                     "text": "Bootstrap",
-                    "picture": "./images/bootstrap_logo.png",
-                    "isPuce": true
+                    "picture": "./images/bootstrap_logo.png"
+
                 }, {
                     "text": "Polymer",
-                    "isPuce": true,
+
                     "picture": "./images/polymer_logo.png"
                 }, {
                     "text": "Symfony",
-                    "picture": "./images/symfony_logo.jpg",
-                    "isPuce": true
+                    "picture": "./images/symfony_logo.jpg"
+
                 }, {
                     "text": "NodeJS",
-                    "picture": "./images/nodejs_logo.png",
-                    "isPuce": true
+                    "picture": "./images/nodejs_logo.png"
+
                 }, {
                     "text": "Electron",
-                    "picture": "./images/electron_logo.png",
-                    "isPuce": true
+                    "picture": "./images/electron_logo.png"
+
                 }, {
                     "text": "Javascript",
-                    "picture": "./images/js_logo.png",
-                    "isPuce": true
+                    "picture": "./images/js_logo.png"
+
                 },
                 {
                     "text": "HTML5",
-                    "picture": "./images/html_logo.png",
-                    "isPuce": true
+                    "picture": "./images/html_logo.png"
+
                 }, {
                     "text": "CSS3",
-                    "picture": "./images/css_logo.png",
-                    "isPuce": true
+                    "picture": "./images/css_logo.png"
+
                 }, {
                     "text": "PHP",
-                    "picture": "./images/php_logo.png",
-                    "isPuce": true
+                    "picture": "./images/php_logo.png"
+
                 }, {
                     "text": "Wordpress",
-                    "picture": "./images/wp_logo.png",
-                    "isPuce": true
+                    "picture": "./images/wp_logo.png"
+
                 }
             ]
         },
@@ -52,17 +52,17 @@
             "picture": "",
             "content": [{
                     "text": "C++",
-                    "isPuce": true,
+
                     "picture": "./images/cpp_logo.jpg"
                 },
                 {
                     "text": "Java",
-                    "isPuce": true,
+
                     "picture": "./images/java_logo.png"
                 },
                 {
                     "text": "C",
-                    "isPuce": true,
+
                     "picture": "./images/c_logo.png"
                 }
             ]
@@ -72,22 +72,22 @@
             "picture": "",
             "content": [{
                     "text": "SQL",
-                    "isPuce": true,
+
                     "picture": "./images/sql_logo.png"
                 },
                 {
                     "text": "MySQL",
-                    "isPuce": true,
+
                     "picture": "./images/mysql_logo.png"
                 },
                 {
                     "text": "Oracle",
-                    "isPuce": true,
+
                     "picture": "./images/oracle_sql_logo.png"
                 },
                 {
                     "text": "PhpMyAdmin",
-                    "isPuce": true,
+
                     "picture": "./images/phpmyadmin_logo.png"
                 }
             ]
@@ -96,12 +96,10 @@
             "name": "Langues",
             "picture": "",
             "content": [{
-                    "text": "Français : natif",
-                    "isPuce": false
+                    "text": "Français : natif"
                 },
                 {
-                    "text": "Anglais : <b>TOEIC :</b> 905/990",
-                    "isPuce": false
+                    "text": "Anglais : <b>TOEIC :</b> 905/990"
                 }
             ]
         }
