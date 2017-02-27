@@ -22,6 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="my-icons.html">
 
@@ -115,6 +116,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         position: fixed;
         color: black;
       }
+      
+      #resumeButton {
+        width: 50px;
+        text-align: center;
+        min-width: 0;
+      }
+      
+      #switchButton {
+        color: white;
+        margin-top: 50px;
+        outline: none;
+      }
     </style>
 
     <app-location use-hash-as-path route="{{route}}"></app-location>
@@ -125,7 +138,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-drawer id="drawer">
         <app-toolbar class="menu-toolbar">
           <div class="profile-picture horizontal center center-justified layout">
-            <img src="https://media.licdn.com/media/p/8/005/09d/07d/20772bd.jpg" alt="">
+            <img src="../images/profile_picture.jpg" alt="">
           </div>
         </app-toolbar>
         <div class="name">
@@ -135,7 +148,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a href="mailto:mathieu.witcz@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/in/mathieuwitcz/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
           <a href="https://github.com/Polycapa" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-          <a href$="{{localize('resume')}}" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
+          <a href$="{{localize('resume')}}" target="_blank">
+            <paper-button id="resumeButton">{{localize('resume-button')}}</paper-button>
+            </i>
+          </a>
         </div>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="#/home">{{localize('home')}}</a>
@@ -143,6 +159,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a name="education" href="#/education">{{localize('education')}}</a>
           <a name="projects" href="#/projects">{{localize('projects')}}</a>
         </iron-selector>
+
+        <div>
+          <paper-button id="switchButton" on-click="_switchLanguage">{{localize('language-switch')}}</paper-button>
+        </div>
+
       </app-drawer>
 
       <!-- Main content -->
@@ -155,10 +176,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
 
         <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
-          <home-page name="home"></home-page>
-          <skills-page name="skills"></skills-page>
-          <education-page name="education"></education-page>
-          <projects-page name="projects"></projects-page>
+          <home-page name="home" id="home"></home-page>
+          <skills-page name="skills" id="skills"></skills-page>
+          <education-page name="education" id="education"></education-page>
+          <projects-page name="projects" id="projects"></projects-page>
           <my-view404 name="view404"></my-view404>
         </iron-pages>
       </app-header-layout>
@@ -189,14 +210,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 'skills': 'Skills',
                 'education': 'Education',
                 'projects': 'Projects',
-                'resume': './data/CV Mathieu Witcz English.pdf'
+                'resume': './data/CV Mathieu Witcz English.pdf',
+                'language-switch': 'Version Française',
+                'resume-button': 'Resume'
               },
               'fr': {
                 'home': 'Accueil',
                 'skills': 'Compétences',
                 'education': 'Parcours',
                 'projects': 'Projets',
-                'resume': './data/CV Mathieu Witcz.pdf'
+                'resume': './data/CV Mathieu Witcz.pdf',
+                'language-switch': 'English version',
+                'resume-button': 'CV'
               }
             }
           }
@@ -228,6 +253,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       _showPage404: function () {
         this.page = 'view404';
       },
+      _switchLanguage: function () {
+        var language;
+        if (this.language == 'fr') {
+          language = 'en';
+        } else {
+          language = 'fr';
+        }
+
+        this.language = language;
+        window.Polymer.userLanguage = language;
+
+        if (this.$.home.setLanguage) {
+          this.$.home.setLanguage(language);
+        }
+
+        if (this.$.skills.setLanguage) {
+          this.$.skills.setLanguage(language);
+        }
+
+        if (this.$.education.setLanguage) {
+          this.$.education.setLanguage(language);
+        }
+
+        if (this.$.projects.setLanguage) {
+          this.$.projects.setLanguage(language);
+        }
+
+      }
     });
   </script>
 </dom-module>
