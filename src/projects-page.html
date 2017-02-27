@@ -1,7 +1,9 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
 <link rel="import" href="data-page.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="data-requester.html">
+
 
 
 <dom-module id="projects-page">
@@ -39,7 +41,7 @@
 
         <data-requester id="requester" on-get-data="_handleDataResponse"></data-requester>
 
-        <div class="horizontal center center-justified layout header">Projets</div>
+        <div class="horizontal center center-justified layout header">{{localize('header')}}</div>
         <div class="content">
 
             <template is="dom-repeat" items= {{data}} as=item index-as=index>
@@ -60,10 +62,35 @@
                     value: function () {
                         return []
                     }
+                },
+                language: {
+                    value: function () {
+                        var language = navigator.language || navigator.browserLanguage;
+                        return language.substring(0, 2);
+                    }
+                },
+                resources: {
+                    value: function () {
+                        return {
+                            'en': {
+                                'header': 'Projects'
+                            },
+                            'fr': {
+                                'header': 'Projets'
+                            }
+                        }
+                    }
                 }
             },
+
+            behaviors: [
+                Polymer.AppLocalizeBehavior
+            ],
             ready: function () {
-                this.$.requester.get('/data/projects.json', 'get-data');
+                var url = '/data/projects.json';
+                if (this.language == 'en')
+                    url = '/data/projects_en.json'
+                this.$.requester.get(url, 'get-data');
             },
             _handleDataResponse: function (e) {
                 this.data = e.detail.response
