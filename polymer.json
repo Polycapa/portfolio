@@ -2,15 +2,18 @@
   "entrypoint": "index.html",
   "shell": "src/my-app.html",
   "fragments": [
-    "src/my-view1.html",
-    "src/my-view2.html",
-    "src/my-view3.html",
+    "src/home-page.html",
+    "src/projects-page.html",
+    "src/education-page.html",
+    "src/skills-page.html",
     "src/my-view404.html"
   ],
   "sourceGlobs": [
     "src/**/*",
     "images/**/*",
-    "bower.json"
+    "data/**/*",
+    "bower.json",
+    "bower_components/font-awesome/**/*"
   ],
   "includeDependencies": [
     "manifest.json",
