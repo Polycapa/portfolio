@@ -1,0 +1,80 @@
+[{
+        "title": "Formation",
+        "data": [{
+                "name": "2015 - Today",
+                "picture": "",
+                "content": [{
+                    "text": "Now in second year of Engineering of Information Systems at Ensimag, one of the most prestigious french « grandes écoles » in IT and applied mathematics",
+                    "picture": ""
+                }]
+            },
+            {
+                "name": "2013 - 2015",
+                "picture": "",
+                "content": [{
+                    "text": "DUT informatique (2 year technical degree in it)",
+                    "picture": ""
+                }]
+            },
+            {
+                "name": "2011-2013",
+                "picture": "",
+                "content": [{
+                    "text": "French baccalaureate in sciences",
+                    "picture": ""
+                }]
+            }
+        ]
+    },
+    {
+        "title": "Experiences",
+        "data": [{
+                "name": "Team projects",
+                "picture": "",
+                "content": [{
+                        "text": "Creation of a compiler for Deca, a sublanguage of Java",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Creation of a Mastermind game",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Creation of an extranet, website for students to look their marks",
+                        "picture": ""
+                    }
+                ]
+            },
+            {
+                "name": "Contest",
+                "picture": "",
+                "content": [{
+                        "text": "Contest between all IT IUT <br><ul><li>OOP : 8/36</li><li>Web : 7/36",
+                        "picture": ""
+                    },
+                    {
+                        "text": "IT contest \"La Nuit de l'informatique\" : 2/8",
+                        "picture": ""
+                    }
+                ]
+            },
+            {
+                "name": "Professionals",
+                "picture": "",
+                "content": [{
+                        "text": "Development of a web application with national use for a french leader in energy",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Summer job as a worker",
+                        "picture": ""
+                    },
+                    {
+                        "text": "Internship as a web developer at Akyos Communication (Dijon, France)",
+                        "picture": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
