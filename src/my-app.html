@@ -164,7 +164,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a href="mailto:mathieu.witcz@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/in/mathieuwitcz/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
           <a href="https://github.com/Polycapa" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-          <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
+          <a href$="{{localize('resume')}}" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
         </div>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="#/home">{{localize('home')}}</a>
@@ -217,13 +217,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 'home': 'Home',
                 'skills': 'Skills',
                 'education': 'Education',
-                'projects': 'Projects'
+                'projects': 'Projects',
+                'resume': './data/CV Mathieu Witcz English.pdf'
               },
               'fr': {
                 'home': 'Accueil',
                 'skills': 'Compétences',
                 'education': 'Parcours',
-                'projects': 'Projets'
+                'projects': 'Projets',
+                'resume': './data/CV Mathieu Witcz.pdf'
               }
             }
           }
