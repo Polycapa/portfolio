@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="shared-styles.html">
 
 
@@ -73,7 +74,28 @@
             a {
                 text-decoration: none;
             }
+            
+            .links a {
+                color: black;
+            }
+            
+            @media(max-width: 375px) {
+                .title {
+                    font-size: 2.5em;
+                }
+                blockquote {
+                    font-size: 20px;
+                }
+                .card {
+                    height: 70px;
+                }
+            }
         </style>
+
+
+        <iron-media-query query="max-width:641px" query-matches="{{mobile}}">
+        </iron-media-query>
+
         <div class="vertical layout body">
             <div class="title horizontal center-justified center layout">
                 Mathieu Witcz
@@ -82,6 +104,12 @@
                 <blockquote class="quote">
                     {{localize('quote')}}
                 </blockquote>
+            </div>
+            <div class="links horizontal center around-justified layout" hidden$="{{!mobile}}">
+                <a href="mailto:mathieu.witcz@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/mathieuwitcz/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                <a href="https://github.com/Polycapa" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
             </div>
             <div class="horizontal around-justified layout wrap">
                 <a href="#/skills">
