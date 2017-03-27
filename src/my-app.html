@@ -37,20 +37,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --profile-picture-size: 150px;
         display: block;
       }
-      
+
       app-header {
         color: #fff;
         background-color: var(--app-primary-color);
       }
-      
+
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
       }
-      
+
       .drawer-list {
         margin: 0 20px;
       }
-      
+
       .drawer-list a {
         display: block;
         padding: 0 16px;
@@ -58,12 +58,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: var(--app-secondary-color);
         line-height: 40px;
       }
-      
+
       .drawer-list a.iron-selected {
         color: black;
         font-weight: bold;
       }
-      
+
       #drawer {
         --app-drawer-content-container: {
           background: #3B3B3B;
@@ -71,58 +71,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: white;
         @apply(--shadow-elevation-8dp);
       }
-      
+
       #drawer a {
         color: white;
       }
-      
+
       .profile-picture {
         text-align: center;
         width: 100%;
         height: 100%;
       }
-      
+
       .profile-picture img {
         border-radius: 50%;
         /*margin: 10px;*/
         width: var(--profile-picture-size);
         height: var(--profile-picture-size);
       }
-      
+
       .menu-toolbar {
         height: calc(var(--profile-picture-size) + 20px);
       }
-      
+
       .name {
         color: white;
         font-size: 25px;
         font-weight: lighter;
         text-align: center;
       }
-      
+
       .links {
         width: 100%;
         height: 50px;
         margin-top: 30px;
       }
-      
+
       .links a {
         color: white;
         text-decoration: none;
       }
-      
+
       .toolbar-content {
         background: none;
         position: fixed;
         color: black;
       }
-      
+
       #resumeButton {
         width: 50px;
         text-align: center;
         min-width: 0;
       }
-      
+
       #switchButton {
         color: white;
         margin-top: 50px;
@@ -199,7 +199,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         language: {
           value: function () {
             var language = navigator.language || navigator.browserLanguage;
-            return language.substring(0, 2);
+            language = language.substring(0, 2);
+            if (language != 'en' && language != 'fr')
+              language = 'en';
+            return language;
           }
         },
         resources: {

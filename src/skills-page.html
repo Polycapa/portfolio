@@ -14,7 +14,7 @@
                 background: var(--paper-grey-300);
                 --header-height: 20vh;
             }
-            
+
             .header {
                 height: var(--header-height);
                 color: white;
@@ -23,13 +23,13 @@
                 font-size: 3em;
                 @apply(--shadow-elevation-4dp);
             }
-            
+
             @media(max-width: 375px) {
                 .header {
                     font-size: 2.3em;
                 }
             }
-            
+
             .title {
                 font-weight: lighter;
                 font-size: 1.8em;
@@ -37,7 +37,7 @@
                 color: white;
                 padding-left: 15px;
             }
-            
+
             .content {
                 background: var(--paper-blue-300);
                 min-height: calc(100vh - var(--header-height));
@@ -71,7 +71,10 @@
                 language: {
                     value: function () {
                         var language = window.Polymer.userLanguage || navigator.language || navigator.browserLanguage;
-                        return language.substring(0, 2);
+                        language = language.substring(0, 2);
+                        if (language != 'en' && language != 'fr')
+                            language = 'en';
+                        return language;
                     }
                 },
                 resources: {
@@ -105,5 +108,21 @@
                 this.ready();
             }
         });
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-38698611-2', 'auto');
+        ga('send', 'pageview');
     </script>
 </dom-module>
